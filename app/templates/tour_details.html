@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %}Створення квитків{% endblock %}</h1>
+<div class="form-group">
+    <img src="{{tour.image_url}}" alt="{{tour.title}}">
+    <h3>{{ tour.title }}</h3>
+    <p>Ціна: {{ tour.price }}</p>
+</div>
+{% endblock %}

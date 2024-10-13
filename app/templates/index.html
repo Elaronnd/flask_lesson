@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{% block title %}Створення квитків{% endblock %}</h1>
+{% for tour in tours %}
+    <div class="form-group">
+        <img src="{{tour.image_url}}" alt="{{tour.title}}">
+        <h3>{{ tour.title }}</h3>
+        <p>Ціна: {{ tour.price }}</p>
+        <a href="{{ url_for('tour_details', id=tour.id) }}">Деталі</a>
+    </div>
+{% endfor %}
+{% endblock %}
